@@ -21,3 +21,7 @@ for i in indexes:
 #Give them the chance to replace items in their cart.
 start_index_to_replace = int(input('Which start index item would you like to replace? '))
 end_index_to_replace = int(input('What is the last index item you want to replace? '))
+
+if start_index_to_replace == end_index_to_replace:
+    #prompt user for new item
+    new_item = input('What is the new item? ')
