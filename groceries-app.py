@@ -25,3 +25,17 @@ end_index_to_replace = int(input('What is the last index item you want to replac
 if start_index_to_replace == end_index_to_replace:
     #prompt user for new item
     new_item = input('What is the new item? ')
+
+    # -replace item at that index with the new item.
+    groceries[start_index_to_replace] = new_item
+else:
+# Gather replacements.
+    replacements = []
+    while True:
+        new_item = input("What is the new item? ")
+        if new_item == '':
+            break
+        replacements.append(new_item)
+        print(replacements)
+
+
