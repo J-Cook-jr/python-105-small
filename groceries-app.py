@@ -8,3 +8,12 @@ while True:
     if item == '':
         break
     groceries.append(item)
+
+
+# After "break" python will move to the next unidented line of code after the loop.
+
+# Print the grocery list with indexes.
+indexes = range(len(groceries))
+for i in indexes:
+    item = groceries[i]
+    print(f'{i}:{item}')
