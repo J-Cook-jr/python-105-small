@@ -17,3 +17,7 @@ indexes = range(len(groceries))
 for i in indexes:
     item = groceries[i]
     print(f'{i}:{item}')
+
+#Give them the chance to replace items in their cart.
+start_index_to_replace = int(input('Which start index item would you like to replace? '))
+end_index_to_replace = int(input('What is the last index item you want to replace? '))
