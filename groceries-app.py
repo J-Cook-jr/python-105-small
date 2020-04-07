@@ -19,15 +19,13 @@ for i in indexes:
     print(f'{i}:{item}')
 
 #Give them the chance to replace items in their cart.
-start_index_to_replace = int(input('Which start index item would you like to replace? '))
-end_index_to_replace = int(input('What is the last index item you want to replace? '))
+start_index_to_replace = (input('Which start index item would you like to replace? '))
+end_index_to_replace = (input('What is the last index item you want to replace? '))
 
-if start_index_to_replace == end_index_to_replace:
-    #prompt user for new item
-    new_item = input('What is the new item? ')
-
-    # -replace item at that index with the new item.
-    groceries[start_index_to_replace] = new_item
+if start_index_to_replace == '' and end_index_to_replace == '':
+    pass
+    
+     # -replace item at that index with the new item.
 else:
 # Gather replacements.
     replacements = []
@@ -46,28 +44,25 @@ else:
 indexes = range(len(groceries))
 for i in indexes:
     item = groceries[i]
-    print(f'{i}: {item}')    
+    print(f'{i}:{item}')   
 
-delete_index = input("Would you like to delete an indexed item? If yes press Y. If no press Enter? ")
-if delete_index == 'Y':
-    delete_item = int(input('Which indexed item would you like to delete?'))
-    groceries[delete_item] = delete_item
-    del groceries[delete_item]
+index_of_item_to_delete = int(input('Would you like to delete an item? Enter the index number or press Enter to exit. '))
+   
+print('Before delete list')
+for i in indexes:
+    item = groceries[i]
+    print(f'{i}:{item}') 
 
-else:
-    deletes = []
-    while True:
-        delete_index = input("Would you like to delete an indexed item? If yes press Y. If no press Enter? ")
-        if delete_index == '':
-            break
-            print(groceries)
-    
+if index_of_item_to_delete != '':
+    del groceries[index_of_item_to_delete]
 
-for delete_item in indexes:
-    if groceries[delete_item]:
-      print(f'{groceries[delete_item]: {item}')
-
-
+print('Updated list')
+indexes = range(len(groceries))
+for i in indexes:
+    item = groceries[i]
+    print(f'{i}:{item}') 
+        
+        
 
 
 
