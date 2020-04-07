@@ -38,4 +38,38 @@ else:
         replacements.append(new_item)
         print(replacements)
 
+    print(groceries)
+    groceries[start_index_to_replace:end_index_to_replace] = replacements
+    print(groceries)
+
+# Print updated combined list.
+indexes = range(len(groceries))
+for i in indexes:
+    item = groceries[i]
+    print(f'{i}: {item}')    
+
+delete_index = input("Would you like to delete an indexed item? If yes press Y. If no press Enter? ")
+if delete_index == 'Y':
+    delete_item = int(input('Which indexed item would you like to delete?'))
+    groceries[delete_item] = delete_item
+    del groceries[delete_item]
+
+else:
+    deletes = []
+    while True:
+        delete_index = input("Would you like to delete an indexed item? If yes press Y. If no press Enter? ")
+        if delete_index == '':
+            break
+            print(groceries)
+    
+
+for delete_item in indexes:
+    if groceries[delete_item]:
+      print(f'{groceries[delete_item]: {item}')
+
+
+
+
+
+
 
